@@ -1,5 +1,6 @@
 import std/[os, osproc]
 import argparse
+import strutils
 
 proc add(paths: string[]):
     
