@@ -5,7 +5,7 @@ author        = "jhands0"
 description   = "A git implementation in Nim"
 license       = "AGPL-3.0-only"
 srcDir        = "src"
-bin           = @["nimblegit"]
+bin           = @["nimgit"]
 
 
 # Dependencies
