@@ -1,5 +1,15 @@
 import std/[os, osproc]
+import argparse
 
+proc add(paths: string[]):
+    
+proc catFile(mode: string):
+    
+proc commit(message: string, author: string):
+    
+proc diff():
+
+proc hashObject(data: string, objType: string, write: bool):
 
 proc init(repo: string):
     var output = execProcess("mkdir", args=[repo])
@@ -10,8 +20,22 @@ proc init(repo: string):
     let file = open(joinPath(repo, ".git", "HEAD"), fmWrite)
     file.writeLine("ref: ref/heads/master".toBytes())
     echo "initialised empty repository: " & repo
+    
+proc lsFiles(details: bool):
+    
+proc push(gitUrl: string, username: string, password: string):
+    
+proc status():
 
 
 when isMainModule:
-    #echo commandLineParams()
-    init()
+    var p = newParser:
+        command("add")
+        command("cat-file")
+        command("commit")
+        command("diff")
+        command("hash-object")
+        command("init")
+        command("ls-files")
+        command("push")
+        command("status")
