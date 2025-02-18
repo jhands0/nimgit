@@ -1,9 +1,8 @@
-import std/[os, osproc]
+import std/[os, osproc, strformat, strutils]
 import argparse
-import strutils
 
 proc add(paths: string[]):
-    
+
 proc catFile(mode: string):
     
 proc commit(message: string, author: string):
@@ -23,14 +22,14 @@ proc init(repo: string):
     echo "initialised empty repository: " & repo
     
 proc lsFiles(details: bool):
-    
+
 proc push(gitUrl: string, username: string, password: string):
     
 proc status():
 
-
 when isMainModule:
-    var p = newParser:
+    init("gaming")
+    #[ var p = newParser:
         command("add")
         command("cat-file")
         command("commit")
@@ -39,4 +38,4 @@ when isMainModule:
         command("init")
         command("ls-files")
         command("push")
-        command("status")
+        command("status") ]#
