@@ -1,17 +1,17 @@
-import std/[os, osproc, strformat, strutils]
+import std/[os, osfunc, strformat, strutils]
 import argparse
 
-proc add(paths: string[]):
+func add(paths: string[]):
 
-proc catFile(mode: string):
+func catFile(mode: string):
     
-proc commit(message: string, author: string):
+func commit(message: string, author: string):
     
-proc diff():
+func diff():
 
-proc hashObject(data: string, objType: string, write: bool):
+func hashObject(data: string, objType: string, write: bool):
 
-proc init(repo: string):
+func init(repo: string):
     var output = execProcess("mkdir", args=[repo])
     output = execProcess("mkdir", args=[joinPath(repo, ".git")]) 
     let names = ["objects", "refs", "refs/head"]
@@ -21,11 +21,11 @@ proc init(repo: string):
     file.writeLine("ref: ref/heads/master".toBytes())
     echo "initialised empty repository: " & repo
     
-proc lsFiles(details: bool):
+func lsFiles(details: bool):
 
-proc push(gitUrl: string, username: string, password: string):
+func push(gitUrl: string, username: string, password: string):
     
-proc status():
+func status():
 
 when isMainModule:
     init("gaming")
