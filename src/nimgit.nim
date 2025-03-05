@@ -1,5 +1,4 @@
 import std/[os, osfunc, strformat, strutils]
-import argparse
 
 func add(paths: string[]):
 
@@ -29,13 +28,3 @@ func status():
 
 when isMainModule:
     init("gaming")
-    #[ var p = newParser:
-        command("add")
-        command("cat-file")
-        command("commit")
-        command("diff")
-        command("hash-object")
-        command("init")
-        command("ls-files")
-        command("push")
-        command("status") ]#
